@@ -1,6 +1,7 @@
 
 # ChatText
-![chat4](https://github.com/user-attachments/assets/59896f18-586d-48ce-b620-347194c51786)
+![chat5](https://github.com/user-attachments/assets/db8f1c29-fe4a-47fd-9c75-dc4bce140da4)
+
 
 A Flutter package for sending text messages, featuring a "scroll to bottom" button and real-time unread message count display.
 
