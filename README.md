@@ -87,7 +87,7 @@ scrollController: scrollController)
 ```
 
 7. Adding an appbar :
-if you need to add the default appBar for ChatScreen , you must add otherUserName, otherUserImage, or both.
+if you need to add the default appBar to ChatScreen , you must add otherUserName, otherUserImage, or both.
 ```dart
 ChatScreen(
   otherUserName: 'Mohamed Abd El.Gwad',
