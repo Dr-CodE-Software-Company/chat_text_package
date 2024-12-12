@@ -5,6 +5,7 @@
 
 A Flutter package for sending text messages, featuring a "scroll to bottom" button and real-time unread message count display.
 
+### Created by mohamed abd elgwad
 
 ## Installing
 
