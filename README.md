@@ -97,7 +97,7 @@ ChatScreen(
 ```
 if you need use custom appBar , don't add otherUserName or otherUserImage
 
-8. If you want to display the number of unread messages when a real time message arrives.
+8. If you want to display the number of unread messages when a real time message arrives and chat is scrolling up.
 
 ```dart
 int unreadMsgRealTime =0;
