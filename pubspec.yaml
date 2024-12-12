@@ -1,7 +1,7 @@
 name: chat_text_package
 description: A Flutter package for sending text messages, featuring a "scroll to bottom" button and real-time unread message count display.
 version: 0.0.1
-homepage:
+homepage: https://github.com/Dr-CodE-Software-Company/chat_text_package.git
 
 environment:
   sdk: '>=3.4.3 <4.0.0'

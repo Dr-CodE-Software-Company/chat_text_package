@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:chat_text_package/chat_text_package.dart';
+
 void main() {
   runApp(const MyApp());
 }
@@ -15,6 +16,7 @@ class MyApp extends StatelessWidget {
     );
   }
 }
+
 class ChatScreenExample extends StatefulWidget {
   const ChatScreenExample({super.key});
   @override
@@ -23,60 +25,276 @@ class ChatScreenExample extends StatefulWidget {
 
 class _ChatScreenExampleState extends State<ChatScreenExample> {
   List<Message> messages = [
-    Message(id: 1, body: 'messsage', fromLoggedUser: true, createdAt: '20:00'),
-    Message(id: 1, body: 'messsage', fromLoggedUser: true, createdAt: '20:00'),
-    Message(id: 1, body: 'messsage', fromLoggedUser: true, createdAt: '20:00'),
-    Message(id: 1, body: 'messsage', fromLoggedUser: true, createdAt: '20:00'),
-    Message(id: 1, body: 'messsage', fromLoggedUser: true, createdAt: '20:00'),
-    Message(id: 1, body: 'messsage', fromLoggedUser: false, createdAt: '20:00'),
-    Message(id: 1, body: 'messsage', fromLoggedUser: false, createdAt: '20:00'),
-    Message(id: 1, body: 'messsage', fromLoggedUser: false, createdAt: '20:00'),
-    Message(id: 1, body: 'messsage', fromLoggedUser: false, createdAt: '20:00'),
-    Message(id: 1, body: 'messsage', fromLoggedUser: false, createdAt: '20:00'),
-    Message(id: 1, body: 'messsage', fromLoggedUser: false, createdAt: '20:00'),
-    Message(id: 1, body: 'messsage', fromLoggedUser: false, createdAt: '20:00'),
-    Message(id: 1, body: 'messsage', fromLoggedUser: false, createdAt: '20:00'),
-    Message(id: 1, body: 'messsage', fromLoggedUser: false, createdAt: '20:00'),
-    Message(id: 1, body: 'messsage', fromLoggedUser: false, createdAt: '20:00'),
-    Message(id: 1, body: 'messsage', fromLoggedUser: false, createdAt: '20:00'),
-    Message(id: 1, body: 'messsage', fromLoggedUser: false, createdAt: '20:00'),
-    Message(id: 1, body: 'messsage', fromLoggedUser: false, createdAt: '20:00'),
-    Message(id: 1, body: 'messsage', fromLoggedUser: false, createdAt: '20:00'),
-    Message(id: 1, body: 'messsage', fromLoggedUser: false, createdAt: '20:00'),
-    Message(id: 1, body: 'messsage', fromLoggedUser: false, createdAt: '20:00'),
-    Message(id: 1, body: 'messsage', fromLoggedUser: false, createdAt: '20:00'),
-    Message(id: 1, body: 'messsage', fromLoggedUser: false, createdAt: '20:00'),
-    Message(id: 1, body: 'messsage', fromLoggedUser: false, createdAt: '20:00'),
-    Message(id: 1, body: 'messsage', fromLoggedUser: false, createdAt: '20:00'),
-    Message(id: 1, body: 'messsage', fromLoggedUser: false, createdAt: '20:00'),
-    Message(id: 1, body: 'messsage', fromLoggedUser: false, createdAt: '20:00'),
-    Message(id: 1, body: 'messsage', fromLoggedUser: true, createdAt: '20:00'),
-    Message(id: 1, body: 'messsage', fromLoggedUser: true, createdAt: '20:00'),
-    Message(id: 1, body: 'messsage', fromLoggedUser: true, createdAt: '20:00'),
-    Message(id: 1, body: 'messsage', fromLoggedUser: true, createdAt: '20:00'),
-    Message(id: 1, body: 'messsage', fromLoggedUser: true, createdAt: '20:00'),
-    Message(id: 1, body: 'messsage', fromLoggedUser: false, createdAt: '20:00'),
-    Message(id: 1, body: 'messsage', fromLoggedUser: false, createdAt: '20:00'),
-    Message(id: 1, body: 'messsage', fromLoggedUser: false, createdAt: '20:00'),
-    Message(id: 1, body: 'messsage', fromLoggedUser: false, createdAt: '20:00'),
-    Message(id: 1, body: 'messsage', fromLoggedUser: false, createdAt: '20:00'),
-    Message(id: 1, body: 'messsage', fromLoggedUser: false, createdAt: '20:00'),
-    Message(id: 1, body: 'messsage', fromLoggedUser: false, createdAt: '20:00'),
-    Message(id: 1, body: 'messsage', fromLoggedUser: false, createdAt: '20:00'),
-    Message(id: 1, body: 'messsage', fromLoggedUser: false, createdAt: '20:00'),
-    Message(id: 1, body: 'messsage', fromLoggedUser: false, createdAt: '20:00'),
-    Message(id: 1, body: 'messsage', fromLoggedUser: false, createdAt: '20:00'),
-    Message(id: 1, body: 'messsage', fromLoggedUser: false, createdAt: '20:00'),
-    Message(id: 1, body: 'messsage', fromLoggedUser: false, createdAt: '20:00'),
-    Message(id: 1, body: 'messsage', fromLoggedUser: false, createdAt: '20:00'),
-    Message(id: 1, body: 'messsage', fromLoggedUser: false, createdAt: '20:00'),
-    Message(id: 1, body: 'messsage', fromLoggedUser: false, createdAt: '20:00'),
-    Message(id: 1, body: 'messsage', fromLoggedUser: false, createdAt: '20:00'),
-    Message(id: 1, body: 'messsage', fromLoggedUser: false, createdAt: '20:00'),
-    Message(id: 1, body: 'messsage', fromLoggedUser: false, createdAt: '20:00'),
-    Message(id: 1, body: 'messsage', fromLoggedUser: false, createdAt: '20:00'),
-    Message(id: 1, body: 'messsage', fromLoggedUser: false, createdAt: '20:00'),
-    Message(id: 1, body: 'messsage', fromLoggedUser: false, createdAt: '20:00'),
+    Message(
+        id: 1,
+        body: 'messsage',
+        fromLoggedUser: true,
+        createdAt: '2024-12-11 03:45 PM'),
+    Message(
+        id: 1,
+        body: 'messsage',
+        fromLoggedUser: true,
+        createdAt: '2024-12-11 03:45 PM'),
+    Message(
+        id: 1,
+        body: 'messsage',
+        fromLoggedUser: true,
+        createdAt: '2024-12-11 03:45 PM'),
+    Message(
+        id: 1,
+        body: 'messsage',
+        fromLoggedUser: true,
+        createdAt: '2024-12-11 03:45 PM'),
+    Message(
+        id: 1,
+        body: 'messsage',
+        fromLoggedUser: true,
+        createdAt: '2024-12-11 03:45 PM'),
+    Message(
+        id: 1,
+        body: 'messsage',
+        fromLoggedUser: false,
+        createdAt: '2024-12-11 03:45 PM'),
+    Message(
+        id: 1,
+        body: 'messsage',
+        fromLoggedUser: false,
+        createdAt: '2024-12-11 03:45 PM'),
+    Message(
+        id: 1,
+        body: 'messsage',
+        fromLoggedUser: false,
+        createdAt: '2024-12-11 03:45 PM'),
+    Message(
+        id: 1,
+        body: 'messsage',
+        fromLoggedUser: false,
+        createdAt: '2024-12-11 03:45 PM'),
+    Message(
+        id: 1,
+        body: 'messsage',
+        fromLoggedUser: false,
+        createdAt: '2024-12-11 03:45 PM'),
+    Message(
+        id: 1,
+        body: 'messsage',
+        fromLoggedUser: false,
+        createdAt: '2024-12-11 03:45 PM'),
+    Message(
+        id: 1,
+        body: 'messsage',
+        fromLoggedUser: false,
+        createdAt: '2024-12-11 03:45 PM'),
+    Message(
+        id: 1,
+        body: 'messsage',
+        fromLoggedUser: false,
+        createdAt: '2024-12-11 03:45 PM'),
+    Message(
+        id: 1,
+        body: 'messsage',
+        fromLoggedUser: false,
+        createdAt: '2024-12-11 03:45 PM'),
+    Message(
+        id: 1,
+        body: 'messsage',
+        fromLoggedUser: false,
+        createdAt: '2024-12-11 03:45 PM'),
+    Message(
+        id: 1,
+        body: 'messsage',
+        fromLoggedUser: false,
+        createdAt: '2024-12-11 03:45 PM'),
+    Message(
+        id: 1,
+        body: 'messsage',
+        fromLoggedUser: false,
+        createdAt: '2024-12-11 03:45 PM'),
+    Message(
+        id: 1,
+        body: 'messsage',
+        fromLoggedUser: false,
+        createdAt: '2024-12-11 03:45 PM'),
+    Message(
+        id: 1,
+        body: 'messsage',
+        fromLoggedUser: false,
+        createdAt: '2024-12-11 03:45 PM'),
+    Message(
+        id: 1,
+        body: 'messsage',
+        fromLoggedUser: false,
+        createdAt: '2024-12-11 03:45 PM'),
+    Message(
+        id: 1,
+        body: 'messsage',
+        fromLoggedUser: false,
+        createdAt: '2024-12-11 03:45 PM'),
+    Message(
+        id: 1,
+        body: 'messsage',
+        fromLoggedUser: false,
+        createdAt: '2024-12-11 03:45 PM'),
+    Message(
+        id: 1,
+        body: 'messsage',
+        fromLoggedUser: false,
+        createdAt: '2024-12-11 03:45 PM'),
+    Message(
+        id: 1,
+        body: 'messsage',
+        fromLoggedUser: false,
+        createdAt: '2024-12-11 03:45 PM'),
+    Message(
+        id: 1,
+        body: 'messsage',
+        fromLoggedUser: false,
+        createdAt: '2024-12-11 03:45 PM'),
+    Message(
+        id: 1,
+        body: 'messsage',
+        fromLoggedUser: false,
+        createdAt: '2024-12-11 03:45 PM'),
+    Message(
+        id: 1,
+        body: 'messsage',
+        fromLoggedUser: false,
+        createdAt: '2024-12-11 03:45 PM'),
+    Message(
+        id: 1,
+        body: 'messsage',
+        fromLoggedUser: true,
+        createdAt: '2024-12-11 03:45 PM'),
+    Message(
+        id: 1,
+        body: 'messsage',
+        fromLoggedUser: true,
+        createdAt: '2024-12-11 03:45 PM'),
+    Message(
+        id: 1,
+        body: 'messsage',
+        fromLoggedUser: true,
+        createdAt: '2024-12-11 03:45 PM'),
+    Message(
+        id: 1,
+        body: 'messsage',
+        fromLoggedUser: true,
+        createdAt: '2024-12-11 03:45 PM'),
+    Message(
+        id: 1,
+        body: 'messsage',
+        fromLoggedUser: true,
+        createdAt: '2024-12-11 03:45 PM'),
+    Message(
+        id: 1,
+        body: 'messsage',
+        fromLoggedUser: false,
+        createdAt: '2024-12-11 03:45 PM'),
+    Message(
+        id: 1,
+        body: 'messsage',
+        fromLoggedUser: false,
+        createdAt: '2024-12-11 03:45 PM'),
+    Message(
+        id: 1,
+        body: 'messsage',
+        fromLoggedUser: false,
+        createdAt: '2024-12-11 03:45 PM'),
+    Message(
+        id: 1,
+        body: 'messsage',
+        fromLoggedUser: false,
+        createdAt: '2024-12-11 03:45 PM'),
+    Message(
+        id: 1,
+        body: 'messsage',
+        fromLoggedUser: false,
+        createdAt: '2024-12-11 03:45 PM'),
+    Message(
+        id: 1,
+        body: 'messsage',
+        fromLoggedUser: false,
+        createdAt: '2024-12-11 03:45 PM'),
+    Message(
+        id: 1,
+        body: 'messsage',
+        fromLoggedUser: false,
+        createdAt: '2024-12-11 03:45 PM'),
+    Message(
+        id: 1,
+        body: 'messsage',
+        fromLoggedUser: false,
+        createdAt: '2024-12-11 03:45 PM'),
+    Message(
+        id: 1,
+        body: 'messsage',
+        fromLoggedUser: false,
+        createdAt: '2024-12-11 03:45 PM'),
+    Message(
+        id: 1,
+        body: 'messsage',
+        fromLoggedUser: false,
+        createdAt: '2024-12-11 03:45 PM'),
+    Message(
+        id: 1,
+        body: 'messsage',
+        fromLoggedUser: false,
+        createdAt: '2024-12-11 03:45 PM'),
+    Message(
+        id: 1,
+        body: 'messsage',
+        fromLoggedUser: false,
+        createdAt: '2024-12-11 03:45 PM'),
+    Message(
+        id: 1,
+        body: 'messsage',
+        fromLoggedUser: false,
+        createdAt: '2024-12-11 03:45 PM'),
+    Message(
+        id: 1,
+        body: 'messsage',
+        fromLoggedUser: false,
+        createdAt: '2024-12-11 03:45 PM'),
+    Message(
+        id: 1,
+        body: 'messsage',
+        fromLoggedUser: false,
+        createdAt: '2024-12-11 03:45 PM'),
+    Message(
+        id: 1,
+        body: 'messsage',
+        fromLoggedUser: false,
+        createdAt: '2024-12-11 03:45 PM'),
+    Message(
+        id: 1,
+        body: 'messsage',
+        fromLoggedUser: false,
+        createdAt: '2024-12-11 03:45 PM'),
+    Message(
+        id: 1,
+        body: 'messsage',
+        fromLoggedUser: false,
+        createdAt: '2024-12-11 03:45 PM'),
+    Message(
+        id: 1,
+        body: 'messsage',
+        fromLoggedUser: false,
+        createdAt: '2024-12-11 03:45 PM'),
+    Message(
+        id: 1,
+        body: 'messsage',
+        fromLoggedUser: false,
+        createdAt: '2024-12-11 03:45 PM'),
+    Message(
+        id: 1,
+        body: 'messsage',
+        fromLoggedUser: false,
+        createdAt: '2024-12-11 03:45 PM'),
+    Message(
+        id: 1,
+        body: 'messsage',
+        fromLoggedUser: false,
+        createdAt: '2024-12-11 03:45 PM'),
   ];
   late ScrollController scrollController;
 
@@ -88,11 +306,12 @@ class _ChatScreenExampleState extends State<ChatScreenExample> {
         child: InkWell(
           onTap: () {
             Navigator.push(context, MaterialPageRoute(builder: (context) {
-            scrollController = ScrollController();
-              return ChatScreen( 
+              scrollController = ScrollController();
+              return ChatScreen(
                   messages: messages,
                   scrollController: scrollController,
                   otherUserName: 'Mohamed Abd El.Gwad',
+                  unreadMsgRealTime: 2,
                   textHint: 'Enter your message',
                   otherUserImage:
                       'https://i1.sndcdn.com/artworks-WLuQqAGQXmbnwKVO-SG8o2Q-t500x500.jpg',
@@ -103,7 +322,7 @@ class _ChatScreenExampleState extends State<ChatScreenExample> {
                             id: 1,
                             body: msg,
                             fromLoggedUser: true,
-                            createdAt: '20:00'));
+                            createdAt: '2024-12-11 03:45 PM'));
                     setState(() {});
                   });
             }));

@@ -9,7 +9,6 @@ import '../widgets/chat_app_bar.dart';
 import '../widgets/chat_screen_body.dart';
 
 class ChatScreen extends StatefulWidget {
-  final AppBar? customAppBar;
   final String otherUserName;
   final String otherUserImage;
   final TextStyle? userNameStyle;
@@ -38,7 +37,6 @@ class ChatScreen extends StatefulWidget {
       this.userNameStyle,
       this.chatAppBackgroundColor = ColorsPackage.whiteColor,
       this.fillColorTextFeild = const Color.fromARGB(255, 237, 241, 252),
-      this.customAppBar,
       this.textColor = ColorsPackage.boldTextColor,
       this.myMessageBackGrounColor = ColorsPackage.primary,
       this.otherMessageBackGrounColor = ColorsPackage.darkGrey,
@@ -63,7 +61,6 @@ class _ChatScreenState extends State<ChatScreen> {
               backgroundColor: Colors.white,
               appBar: 
                   ChatAppBar(
-                  
                     otherUserImage: widget.otherUserImage,
                     otherUserName: widget.otherUserName,
                     userNameStyle: widget.userNameStyle,

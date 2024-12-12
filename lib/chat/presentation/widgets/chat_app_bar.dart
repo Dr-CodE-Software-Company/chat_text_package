@@ -13,7 +13,7 @@ class ChatAppBar extends StatelessWidget implements PreferredSizeWidget {
       required this.chatAppBackgroundColor});
 
   @override
-  Widget build(BuildContext context) {
+    Widget build(BuildContext context) {
     return otherUserName.isNotEmpty || otherUserImage.isNotEmpty
 
         //   backgroundColor: chatAppBackgroundColor,
